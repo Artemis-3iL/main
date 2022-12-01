@@ -35,26 +35,28 @@
     </nav>
     <main>
         <p>Lou, Mathis, Ruben -> Page test de pureté -> Une page + page finale résultat -> EsaterEggs cachés</p>
-
-        <form id="questionnaire", action="">
+        <span id="questionnaire_titre">
+            Question
+        </span>
+        <div id="questionnaire">
             <div>
-                <input type="radio" id="rep1" value="reponse">
-                <label for="rep1">Réponse 1</label>
+                <input onchange="choix(1)" type="radio" id="rep1" name="reponse">
+                <label id="rep1_label" for="rep1">Réponse 1</label>
             </div>
             <div>
-                <input type="radio" id="rep2" value="reponse">
-                <label for="rep2">Réponse 2</label>
+                <input onchange="choix(2)" type="radio" id="rep2" name="reponse">
+                <label id="rep2_label" for="rep2">Réponse 2</label>
             </div>
             <div>
-                <input type="radio" id="rep3" value="reponse">
-                <label for="rep3">Réponse 3</label>
+                <input onchange="choix(3)" type="radio" id="rep3" name="reponse">
+                <label id="rep3_label" for="rep3">Réponse 3</label>
             </div>
             <div>
-                <input type="radio" id="rep4" value="reponse">
-                <label for="rep4">Réponse 4</label>
+                <input onchange="choix(4)" type="radio" id="rep4" name="reponse">
+                <label id="rep4_label" for="rep4">Réponse 4</label>
             </div>
             <button onclick="valider()">Valider</button>
-        </form>
+        </div>
     
     </main>
     <footer>
@@ -63,7 +65,7 @@
 </body>
 
 <script>
-    setTimeout(function () { location.reload(1); }, 1000);
+<!--setTimeout(function () { location.reload(1); }, 1000);-->
 </script>
 
 </html>
