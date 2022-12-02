@@ -72,8 +72,7 @@ function move() {
     }
 } else{
     button.innerHTML = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-    button.onclick = random1;  
-
+    button.onclick = random1;
 }
 }
 

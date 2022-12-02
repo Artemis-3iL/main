@@ -95,3 +95,6 @@ function resultat_final(){
         resultat.textContent = "Ton score est haut (aucun problème bro, continue comme sa)";
     }
 }
+function open_val(){
+    open("val.html");
+}
