@@ -1,4 +1,6 @@
 window.onload = function(){
+    resultat = document.getElementById("resultat");
+    resultat.style.display = "none";
     score_test = 0;
     resultat = document.getElementById("resultat");
     liste_reponses_input = [
@@ -52,7 +54,7 @@ function choix(n){
 }
 function valider(){
     if(liste_question.length-1 <= question_n){
-        window.location.href='pageDEfin.html';
+        //window.location.href='pageDEfin.html';
         resultat_final();
     }
     if(reponse_choisie != 0){
@@ -77,5 +79,19 @@ function valider(){
 function update(){
     for (let i = 0; i < liste_reponses[0].length; i++) {
         liste_reponses_labels[i].textContent = liste_reponses[question_n][i];
+    }
+}
+
+var resultat;
+function resultat_final(){
+    document.getElementById("questionnaire_titre").style.display = "none";
+    document.getElementById("questionnaire").style.display = "none";
+    resultat.style.display = "block";
+    if(score_test >= 10){
+        resultat.textContent = "Ton score est bas (tu vas bientôt mourir ou avoir des enfants)";
+    }else if(score_test > 0 && score_test < 10){
+        resultat.textContent = "Ton score est moyen (tu as peut-être une chance de t'en sortir)";
+    }else{
+        resultat.textContent = "Ton score est haut (aucun problème bro, continue comme sa)";
     }
 }
