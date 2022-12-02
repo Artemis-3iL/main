@@ -1,5 +1,5 @@
 window.onload = function(){
-    // Récuperer rep_labels
+    score_test = 0;
     liste_reponses_input = [
         document.getElementById("rep1"),
         document.getElementById("rep2"),
@@ -15,28 +15,61 @@ window.onload = function(){
     reponse_choisie = 0;
     question_n = 0;
     document.getElementById("questionnaire_titre").textContent = liste_question[question_n];
-    for (let i = 0; i < liste_question.length; i++) {
-        liste_reponses_labels[i].textContent = liste_reponses[question_n][i];
-    }
+    update();
 }
 var question_n;
-var liste_reponses_labels ;
-var liste_question = ["Question A","Question B","Question C","Question D"]
-var liste_reponses = [["Réponse A-1","Réponse A-2","Réponse A-3","Réponse A-4"],["Réponse B-1","Réponse B-2","Réponse B-3","Réponse B-4"],["Réponse C-1","Réponse C-2","Réponse C-3","Réponse C-4"],["Réponse D-1","Réponse D-2","Réponse D-3","Réponse D-4"]];
+var liste_reponses_input;
+var liste_reponses_labels;
+var liste_question = ["Savez-vous ce que veut dire MST ?",
+    "Combien connaissez-vous de MST ?",
+    "Où se faire dépister ?",
+    "Savez-vous comment l'on se dépiste ?",
+    "Avez-vous souvent des rapports sexuels sans protections ?",
+    "Savez-vous quelle est l'espérance de vie d'une personne atteinte du SIDA ?",
+    "Quand se faire dépister?",
+    "Quels sont les symptômes d'une MST"]
+
+var liste_reponses = [
+    ["Meuf Sans T-shirt","Maison Sans Toit","Marmotte Sous Thérapie","Maladie Sexuellement Transmissible"],
+    ["1","2","3 ou 4","+ de 5"],
+    ["Dans une maison close","Chez mémé","Dans une clinique","A l'hopital"],
+    ["En se coupant une partie de son intimitté","Avec un test Covid","Par prélèvement salivaire","Par prise de sang et/ou prélèvement urinaire"],
+    ["Toujours","Souvent","Parfois","Jamais"],
+    ["On s'en fout, elle va creuver","50 ans","10 ans","20 ans"],
+    ["On le fait pas, c'est pour les faibles","1h ou 2h après l'acte","2 semaines après","2 ou 3 mois après"]
+    ["C'est quoi une MST, Hagueuegueu ???","Tu meurs","Dans certain cas de la fièvre et ","Des douleurs aux alentours des parties génitales"]
+/*
+*/];
 var reponse_choisie;
+var score_test;
 function choix(n){
     reponse_choisie = n;
 }
 function valider(){
     if(liste_question.length-1 <= question_n){
         window.location.href='pageDEfin.html';
-    }if(reponse_choisie != 0){
+    }
+    if(reponse_choisie != 0){
+        switch (reponse_choisie) {
+            case 1:
+                score_test +=2;
+                break;
+            case 2:
+                score_test ++;
+                break;
+            case 4:
+                score_test--;
+                break;
+        }
         question_n++;
         document.getElementById("questionnaire_titre").textContent = liste_question[question_n];
-        for (let i = 0; i < liste_question.length; i++) {
-            liste_reponses_labels[i].textContent = liste_reponses[question_n][i];
-        }
+        update();
         liste_reponses_input[reponse_choisie-1].checked = false;
         reponse_choisie = 0;
     }  
+}
+function update(){
+    for (let i = 0; i < liste_reponses[0].length; i++) {
+        liste_reponses_labels[i].textContent = liste_reponses[question_n][i];
+    }
 }
