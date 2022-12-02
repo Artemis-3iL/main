@@ -37,7 +37,7 @@ var liste_reponses = [
     ["Toujours","Souvent","Parfois","Jamais"],
     ["On s'en fout, elle va creuver","50 ans","10 ans","20 ans"],
     ["On le fait pas, c'est pour les faibles","1h ou 2h après l'acte","2 semaines après","2 ou 3 mois après"]
-    ["C'est quoi une MST, Hagueuegueu ???","Tu meurs","Dans certain cas de la fièvre et ","Des douleurs aux alentours des parties génitales"]
+    ["C'est quoi une MST, Hagueuegueu ???","Tu meurs","Dans certain cas de la fièvre et des maux de tête","Des douleurs aux alentours des parties génitales"]
 /*
 */];
 var reponse_choisie;
