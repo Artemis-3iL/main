@@ -28,7 +28,9 @@ function choix(n){
     reponse_choisie = n;
 }
 function valider(){
-    if(reponse_choisie != 0){
+    if(liste_question.length-1 <= question_n){
+        window.location.href='pageDEfin.html';
+    }if(reponse_choisie != 0){
         question_n++;
         document.getElementById("questionnaire_titre").textContent = liste_question[question_n];
         for (let i = 0; i < liste_question.length; i++) {
@@ -36,5 +38,5 @@ function valider(){
         }
         liste_reponses_input[reponse_choisie-1].checked = false;
         reponse_choisie = 0;
-    }
+    }  
 }

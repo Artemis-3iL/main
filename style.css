@@ -22,8 +22,36 @@
 		color:black;
 	}
 	*/
-	h1{
-		
+	main{
+		/*background-color: red;*/
+		padding:10vh 0 10vh 0;
+		text-align: center;
+	}
+	#questionnaire{
+		padding: 5vh 10vw 5vh 10vw;
+		font-size: 3vw;
+		text-align: left;
+	}
+	#questionnaire_titre{
+		display: block;
+		text-align: center;
+		color: #FFA31A;
+		font-size: 4vw;
+	}
+	#valider{
+		border: 0;
+		line-height: 2.5;
+		padding: 0 10vw;
+		font-size: 1rem;
+		text-align: center;
+		color: #fff;
+		text-shadow: 1px 1px 1px #000;
+		border-radius: 10px;
+		background-color: #FFA31A;
+		background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+	}
+	#questionnaire > button{
+		margin-left: 25.5vw;
 	}
 	footer{
 		/*border-style: solid;*/
@@ -34,7 +62,8 @@
 		text-align: center;
 		width: 100%;
 		display:grid;
-		grid-template-columns: 1fr 10fr 10fr;
+		/*grid-template-columns: 1fr 1fr 1fr;*/
+		grid-template-columns:2fr 6fr 2fr
 	}
 	header > div{
 		text-align: center;
@@ -42,7 +71,16 @@
 	}
 	#title > span:nth-child(2){
 		color:black;
-		background-color: orange;
+		background-color: #FFA31A;
 		border-radius: 10px;
 		padding:8px
 	}
+	input[type=radio] {
+		width: 3vw;
+		height: 4vw;
+		vertical-align: middle;
+	}
+	input[type=radio]:checked{
+		accent-color:#FFA31A;
+	}
+	
