@@ -97,7 +97,12 @@
 				button3.style.top = Math.floor(Math.random()*((window.innerHeight || document.documentElement.clientHeight) - button3.offsetHeight));
                 button3.style.display = "block";
                 button1.style.display = "none";
-				button2.onclick = reconstitution1;	
+				button2.onclick = reconstitution1;
+                }else{
+                    button1.onclick = function(){
+                        open("index.html");
+                    }
+                }	
 			
 			function reconstitution1(){
 				button2.style.display = "none";
@@ -114,7 +119,6 @@
 			}
 			conter2++
 		}
-	}
 			
             
 
