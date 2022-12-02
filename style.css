@@ -7,10 +7,13 @@
 		padding: 2vw;
 		font-family: system-ui;
 		font-weight: 800;
+		color:white;
+		background-color:black;
 		user-select: none;
-        background-image: url(https://img.freepik.com/vecteurs-premium/fond-rose-nuage_489121-1.jpg?w=2000);
+        /*background-image: url(https://img.freepik.com/vecteurs-premium/fond-rose-nuage_489121-1.jpg?w=2000);*/
 
 	}
+	/*
 	img{
 		display: block;
 	}
@@ -18,18 +21,28 @@
 		text-decoration:none;
 		color:black;
 	}
+	*/
 	h1{
-		text-align: center;
-		text-decoration-line: underline;
-		font-size: 2.5em;
+		
 	}
 	footer{
-		border-style: solid;
+		/*border-style: solid;*/
 		text-align: center;
-		border: pink solid 0.5vw;
+		/*border: pink solid 0.5vw;*/
 	}
 	header{
 		text-align: center;
-        background-color: white;
-        border: pink solid 0.5vw;
+		width: 100%;
+		display:grid;
+		grid-template-columns: 1fr 10fr 10fr;
+	}
+	header > div{
+		text-align: center;
+		font-size: 2.5em;
+	}
+	#title > span:nth-child(2){
+		color:black;
+		background-color: orange;
+		border-radius: 10px;
+		padding:8px
 	}
